@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="destaque">#FF6052</color>
+    <color name="destaque_dark">#003EA6</color>
+    <color name="azul_odontoprev">#0066FF</color>
 </resources>
