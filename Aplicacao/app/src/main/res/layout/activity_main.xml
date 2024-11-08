@@ -10,19 +10,21 @@
 
     <Button
         android:id="@+id/mainBtn"
-        android:layout_width="151dp"
-        android:layout_height="52dp"
+        android:layout_width="168dp"
+        android:layout_height="57dp"
         android:layout_marginBottom="132dp"
         android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/noto_sans_sc_bold"
         android:text="@string/main_btn"
-        android:textAlignment="center"
+        android:textAlignment="gravity"
         android:textAllCaps="true"
         android:textColor="#FF6052"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTxt"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/mainTitulo"
@@ -37,7 +39,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/logoOdontoprev" />
 
     <TextView
         android:id="@+id/mainTxt"
@@ -55,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/mainTitulo" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/logoOdontoprev"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

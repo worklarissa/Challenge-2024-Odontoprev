@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         var btnComeco: Button = findViewById(R.id.mainBtn)
 
         btnComeco.setOnClickListener {
-            val navegarMain = Intent(this, PerguntaDissertativaActivity::class.java)
+            val navegarMain = Intent(this, TelaAutorizacaoRaiox::class.java)
             startActivity(navegarMain)
 
 

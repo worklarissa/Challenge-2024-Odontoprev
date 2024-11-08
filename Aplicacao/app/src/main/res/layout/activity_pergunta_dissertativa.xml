@@ -40,7 +40,7 @@
         android:layout_height="51dp"
         android:layout_marginTop="84dp"
         android:backgroundTint="@color/azul_odontoprev"
-        android:text="@string/pergunta_btn"
+        android:text="@string/btn_enviar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />

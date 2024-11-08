@@ -4,5 +4,11 @@
     <string name="main_text">Essas informações são muito importantes para o seu dentista e vão ajudar no seu tratamento. Além disso, ao trazer essas informações, você acumula pontos que podem ser trocados futuramente.</string>
     <string name="main_btn">Começar</string>
     <string name="pergunta_exemplo">Você está sentindo alguma dor ou desconforto em sua boca? Se sim, descreva essa dor ou desconforto.</string>
-    <string name="pergunta_btn">Enviar</string>
+    <string name="btn_enviar">Enviar</string>
+    <string name="raiox_pergunta">Gostaria de enviar seu último Raio-X para uma análise preditiva por IA para ajudar seu médico em seu diagnóstico?</string>
+    <string name="raiox_btn_automatico">Sim, eu autorizo o envio do meu Raio -x.</string>
+    <string name="raiox_btn_envio">Sim, gostaria de enviar a foto do meu Raio-X</string>
+    <string name="raiox_btn_negativa">Não. Envie meu Raio-X apenas para meu dentista.</string>
+    <string name="btn_voltar">Voltar</string>
+    <string name="aviso_premiacao">*Sujeito à distribuição de pontos e brindes.</string>
 </resources>
