@@ -11,14 +11,22 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class TelaAnalises : AppCompatActivity() {
+
+    var listAnalises: ListView  = findViewById(R.id.listaAnalises);
+    var  String[] itens = {
+        "Análise 00001", "Análise 00002", "Análise 00003", "Análise 00004", "Análise 00004"
+    }
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_tela_analises)
 
-        val listaAnalises = findViewById<RecyclerView>(R.id.listaAnalises)
-        listaAnalises.layoutManager = LinearLayoutManager(this)
-        listaAnalises.setHasFixedSize(true)
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>
+
+
     }
 }
 
