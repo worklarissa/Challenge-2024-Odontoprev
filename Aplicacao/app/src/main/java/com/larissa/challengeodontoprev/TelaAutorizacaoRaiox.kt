@@ -20,10 +20,11 @@ class TelaAutorizacaoRaiox : AppCompatActivity() {
         var btnVoltar: Button = findViewById(R.id.btnVoltar)
 
 
-        val navegarAnalises = Intent(this, TelaAnalises::class.java)
+        //val navegarAnalises = Intent(this, TelaAnalises::class.java)
 
         btnEnvioAutomatico.setOnClickListener{
             // Lógica para enviar raio-x direto do banco de dados para análise na IA
+            val navegarAnalises = Intent(this, TelaAnalises::class.java)
             startActivity(navegarAnalises)
         }
 
@@ -33,6 +34,7 @@ class TelaAutorizacaoRaiox : AppCompatActivity() {
         }
 
         btnNegativaEnvio.setOnClickListener{
+            val navegarAnalises = Intent(this, TelaAnalises::class.java)
             startActivity(navegarAnalises)
         }
 

@@ -11,5 +11,9 @@
     <string name="raiox_btn_negativa">Não. Envie meu Raio-X apenas para meu dentista.</string>
     <string name="btn_voltar">Voltar</string>
     <string name="aviso_premiacao">*Sujeito à distribuição de pontos e brindes.</string>
-    <string name="txt_questionario">*Sujeito à distribuição de pontos e brindes.</string>
+    <string name="txt_questionario">Fale mais sobre você para colaborar com seu dentista. (Essas informações podem facilitar no momento de triagem)</string>
+    <string name="btn_questionario">Responde algumas perguntas</string>
+    <string name="btn_continuar">Continuar</string>
+    <string name="btn_galeria">Acessar Galeria</string>
+    <string name="btn_camera">Acessar câmera</string>
 </resources>
