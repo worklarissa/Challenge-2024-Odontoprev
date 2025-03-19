@@ -1,17 +1,21 @@
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import { useNavigation} from '@react-navigation/native';
+
 
 export default function EnviarRaioX() {
+  const { navigate } = useNavigation();
+
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Gostaria de enviar seu último Raio-X para uma análise preditiva por IA para ajudar seu médico em seu diagnóstico?</Text>
-            <TouchableOpacity style={styles.botao} onPress={() => navigate('EnviarRaio')}>
-                                <Text style={styles.botao}>COMEÇAR</Text>
+            <TouchableOpacity style={styles.botao} onPress={() => navigate('TelaAnalises')}>
+                                <Text style={styles.botao}>Sim, eu autorizo o envio do meu úlltimo Raio -x.</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.botao} onPress={() => navigate('EnviarRaio')}>
-                                <Text style={styles.botao}>COMEÇAR</Text>
+            <TouchableOpacity style={styles.botao} onPress={() => navigate('TelaImportar')}>
+                                <Text style={styles.botao}>Sim, gostaria de enviar a foto do meu Raio X</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.botao} onPress={() => navigate('EnviarRaio')}>
-                                <Text style={styles.botao}>COMEÇAR</Text>
+            <TouchableOpacity style={styles.botao} onPress={() => navigate('TelaAnalises')}>
+                                <Text style={styles.botao}>Não. Envie meu Raio-X apenas para meu dentista.</Text>
             </TouchableOpacity>
         </View>
     )
@@ -45,8 +49,11 @@ const styles = StyleSheet.create({
       textAlign: 'center'
     },
     botao: {
-      padding: 10,
-      backgroundColor: '',
-      color: '#FF6052'
+      margin: 10,
+      padding: 1,
+      backgroundColor: '#0066FF',
+      color: '#FFF',
+      borderRadius: 20,
+      fontWeight: 'bold'
     }
   });

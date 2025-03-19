@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Button, Image, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import { useNavigation} from '@react-navigation/native'
 
 
@@ -29,9 +29,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#0066FF',
       fontFamily: 'Noto Sans SC',
       alignItems: 'center',
-      justifyContent: 'center',
-      backgroundSize: 'cover'
-      
+      justifyContent: 'center' 
     },
     logo: {
       alignItems: 'flex-start',
