@@ -30,10 +30,6 @@ const styles = StyleSheet.create({
       backgroundSize: 'cover'
       
     },
-    logo: {
-      alignItems: 'flex-start',
-      justifyContent: 'center'
-    },
     title: {
       fontFamily: 'Noto Sans SC',
       fontWeight: 'bold',
@@ -41,12 +37,6 @@ const styles = StyleSheet.create({
       color: '#5D5B5B',
       textAlign: 'center',
       padding: 10
-    },
-    texto: {
-      padding: 10,
-      alignItems: 'center',
-      color: '#FFFFFF',
-      textAlign: 'center'
     },
     botao: {
       margin: 10,
