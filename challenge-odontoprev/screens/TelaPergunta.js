@@ -14,7 +14,7 @@ export default function TelaPergunta() {
                 onChangeText={onChangeText}
                 value={text}
             />
-                    <TouchableOpacity style={styles.botao} onPress={() => navigate('TelaAnalises')}>
+                    <TouchableOpacity style={styles.botao} onPress={() => navigate('#')}>
                                                     <Text style={styles.botao}>Enviar</Text>
                     </TouchableOpacity>
                 </View>
