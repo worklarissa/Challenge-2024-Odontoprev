@@ -1,34 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import{ createNativeStackNavigator } from '@react-navigation/native-stack'
+import { useState } from 'react';
+import { StyleSheet, Text, View, Button, Image, Modal } from 'react-native';
+import Home from './screens/Home';
+import EnviarRaioX from './screens/EnviarRaioX';
+import TelaAnalises from './screens/TelaAnalises';
+import ImportarRaio from './screens/TelaImportar';
+import TelaPergunta from './screens/TelaPergunta';
+
+const Stack = createNativeStackNavigator()
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Image style={styles.logo}
-        source={require('./assets/logo_odontoprev.png')}
-      />
-      <Text style={styles.title} >Bem-vindo(a) à atualização diária sobre sua saúde bucal!</Text>
-      
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{
+            headerShown: false
+          }} >
+          <Stack.Screen name = 'Home' component={Home} />
+          <Stack.Screen name = 'EnviarRaio' component={EnviarRaioX} />
+          <Stack.Screen name = 'TelaAnalises' component={TelaAnalises} />
+          <Stack.Screen name = 'TelaImportar' component={ImportarRaio} />
+          <Stack.Screen name = 'TelaPergunta' component={TelaPergunta} />
+        </Stack.Navigator>
+      </NavigationContainer>
+
+    
+
+
+
+
   );
 }
 
-const styles = StyleSheet.create({
-  
-  container: {
-    backgroundColor: '#0066FF',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  logo: {
-    alignItems: 'flex-start',
-    justifyContent: 'center'
-  },
-  title: {
-    fontFamily: 'Noto Sans SC',
-    fontStyle: 'bold',
-    color: 'FFFFFF'
-  }
-});
+
