@@ -1,17 +1,8 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
-
-# 
-
----
-
 # OdontoPrev - Solução Integrada de Saúde Bucal
-
-Status do Projeto
 
 Solução tecnológica para a plataforma OdontoPrev visando reduzir fraudes e otimizar a gestão de sinistros através de acompanhamento diário de pacientes e análise preditiva com inteligência artificial.
 
 ## Índice
-
 - [Sobre o Problema](#sobre-o-problema)
 - [Nossa Solução](#nossa-solu%C3%A7%C3%A3o)
 - [Funcionalidades](#funcionalidades)
@@ -28,7 +19,7 @@ Solução tecnológica para a plataforma OdontoPrev visando reduzir fraudes e ot
 
 ## Sobre o Problema
 
-A plataforma OdontoPrev está enfrentando desafios significativos relacionados à geração de sinistros. Tanto fraudes como a geração de sinistros considerados ruins têm gerado altos custos para a empresa que busca oferecer um serviço cada vez mais especializado[^1]. Um aumento no excesso de consultas, tratamentos desnecessários e fraudes reflete não apenas um problema interno, mas também uma mudança no padrão de atendimento aos pacientes[^1].
+A plataforma OdontoPrev está enfrentando desafios significativos relacionados à geração de sinistros. Tanto fraudes como a geração de sinistros considerados ruins têm gerado altos custos para a empresa que busca oferecer um serviço cada vez mais especializado. Um aumento no excesso de consultas, tratamentos desnecessários e fraudes reflete não apenas um problema interno, mas também uma mudança no padrão de atendimento aos pacientes.
 
 ## Nossa Solução
 
@@ -37,7 +28,7 @@ Desenvolvemos uma solução integrada ao aplicativo já existente da OdontoPrev 
 1. **Acompanhamento diário de pacientes**: Interface gamificada onde os pacientes respondem perguntas sobre seus hábitos alimentares, saúde geral e higiene bucal.
 2. **Análise preditiva via IA**: Sistema de prognóstico baseado em Raio-X que o paciente pode enviar pelo aplicativo, onde uma inteligência artificial realiza predições sobre sua saúde bucal.
 
-Estas funcionalidades permitem que o dentista já conheça os hábitos do paciente e tenha uma ideia prévia de possíveis problemas dentais antes mesmo da consulta[^1].
+Estas funcionalidades permitem que o dentista já conheça os hábitos do paciente e tenha uma ideia prévia de possíveis problemas dentais antes mesmo da consulta.
 
 ## Funcionalidades
 
@@ -46,7 +37,7 @@ Estas funcionalidades permitem que o dentista já conheça os hábitos do pacien
 - Interface interativa e descontraída para aumentar o engajamento
 - Sistema de pontuação (check-in) para incentivar o uso frequente
 - Questionários sobre hábitos alimentares e de higiene bucal
-- Pontos acumulados podem ser trocados por procedimentos estéticos
+- Pontos acumulados podem ser trocados por premiações a escolha da empresa
 
 
 ### Análise Preditiva com IA
@@ -61,14 +52,11 @@ Estas funcionalidades permitem que o dentista já conheça os hábitos do pacien
 ## Tecnologias Utilizadas
 
 ### Frontend
-
 - React Native
 - Expo
 
-
 ### Backend
-
-- Python 3.8+
+- Python 3
 - AWS Chalice
 
 
