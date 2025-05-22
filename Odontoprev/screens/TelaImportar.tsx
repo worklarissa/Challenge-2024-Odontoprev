@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, View, Text, Image, TouchableOpacity, Alert, ActivityIndicator } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import * as ImagePicker from 'expo-image-picker';
+import { RootStackParamList } from './App.tsx';
 
 export default function ImportarRaio() {
   const navigation = useNavigation();
@@ -32,7 +33,7 @@ export default function ImportarRaio() {
     }
   };
   
-  const processarImagem = async (imageUri) => {
+  const processarImagem = async (imageUri:string) => {
     setLoading(true);
     
     try {
@@ -43,9 +44,13 @@ export default function ImportarRaio() {
         const reader = new FileReader();
         
         reader.onloadend = () => {
-          const parts = reader.result.split(',');
-          const base64 = parts[1];
-          resolve(base64);
+          if (reader.result) {
+            const parts = (reader.result as string).split(',');
+            const base64 = parts[1];
+            resolve(base64);
+          } else {
+            reject(new Error('Falha na leitura do arquivo: resultado nulo'));
+          }
         };
         
         reader.onerror = (error) => {

@@ -7,14 +7,20 @@ import TelaAnalises from './screens/TelaAnalises';
 import ImportarRaio from './screens/TelaImportar';
 import TelaPergunta from './screens/TelaPergunta';
 
-const Stack = createNativeStackNavigator()
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 // navigationTypes.ts
 export type RootStackParamList = {
   Home: undefined;
   EnviarRaioX: undefined;
   ImportarRaio: undefined;
-  TelaAnalises: undefined;
+  TelaAnalises: { // Adicione os parâmetros
+    resultadoAnalise: { 
+      output_image: any; 
+      predictions: any 
+    }[];
+    imagemUri: string;
+  };
   TelaPergunta: undefined;
   TelaDestino: undefined;
 };
@@ -27,8 +33,8 @@ export default function App() {
         headerShown: false
       }}>
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="EnviarRaio" component={EnviarRaioX} />
-        <Stack.Screen name="TelaImportar" component={ImportarRaio} />
+        <Stack.Screen name="EnviarRaioX" component={EnviarRaioX} />
+        <Stack.Screen name="ImportarRaio" component={ImportarRaio} />
         <Stack.Screen name="TelaAnalises" component={TelaAnalises} />
         <Stack.Screen name="TelaPergunta" component={TelaPergunta} />
       </Stack.Navigator>
