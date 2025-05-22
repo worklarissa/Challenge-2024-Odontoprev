@@ -2,10 +2,17 @@ import React, { useState } from "react";
 import { StyleSheet, View, Text, Image, TouchableOpacity, Alert, ActivityIndicator } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import * as ImagePicker from 'expo-image-picker';
-import { RootStackParamList } from './App.tsx';
+import { RootStackParamList } from '../App.js';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+
+
 
 export default function ImportarRaio() {
-  const navigation = useNavigation();
+  type NavigationProp = NativeStackNavigationProp<
+  RootStackParamList, 
+  'ImportarRaio'>;
+
+  const navigation = useNavigation<NavigationProp>();
   const [loading, setLoading] = useState(false);
   
   const escolherDaGaleria = async () => {
