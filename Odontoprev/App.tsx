@@ -9,7 +9,7 @@ import TelaPergunta from './screens/TelaPergunta';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-// navigationTypes.ts
+
 export type RootStackParamList = {
   Home: undefined;
   EnviarRaioX: undefined;
