@@ -11,21 +11,27 @@ import {
     FlatList,
 } from "react-native";
 import { useRoute, useNavigation } from "@react-navigation/native";
+import type { RouteProp } from '@react-navigation/native';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../App';
+
+type TelaAnalisesRouteProp = RouteProp<RootStackParamList, 'TelaAnalises'>;
 
 export default function TelaAnalises() {
-    const route = useRoute();
-    const navigation = useNavigation();
+    const route = useRoute<TelaAnalisesRouteProp>();
+    const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
     const { resultadoAnalise, imagemUri } = route.params || {};
     const [predicoes, setPredicoes] = useState([]);
-    const [contagem, setContagem] = useState({});
-    const [imagemProcessada, setImagemProcessada] = useState(null);
+    const [contagem, setContagem] = useState<Record<string, number>>({});
+    const [imagemProcessada, setImagemProcessada] = useState<string | null>(null);
+    
 
     useEffect(() => {
         if (resultadoAnalise && resultadoAnalise[0]?.predictions?.predictions) {
             const todasPredicoes = resultadoAnalise[0].predictions.predictions;
             setPredicoes(todasPredicoes);
 
-            const contagemClasses = todasPredicoes.reduce((acc, item) => {
+            const contagemClasses = todasPredicoes.reduce((acc: Record<string, number>, item: any) => {
                 const classe = item.class;
                 acc[classe] = (acc[classe] || 0) + 1;
                 return acc;
@@ -40,23 +46,24 @@ export default function TelaAnalises() {
         }
     }, [resultadoAnalise]);
 
-    const getCorClasse = (classe) => {
-        const cores = {
-            "Abscesso apical": "#8622FF",
-            "Carie": "#FE0056",
-            "Coroa dentaria": "#FFFF00",
-            "Implante": "#FF00FF",
-            "Obturacao de canal radicular": "#FF8000",
-            "Pino pre-fabricado": "#00FFCE",
-            "Raiz residual": "#0E7AFE",
-            "Restauracao de amalgama": "#C7FC00",
-            "Restauracao de resina composta": "#00B7EB",
-        };
+    const getCorClasse = (classe: string) => {
+    const cores = {
+        "Abscesso apical": "#8622FF",
+        "Carie": "#FE0056",
+        "Coroa dentaria": "#FFFF00",
+        "Implante": "#FF00FF",
+        "Obturacao de canal radicular": "#FF8000",
+        "Pino pre-fabricado": "#00FFCE",
+        "Raiz residual": "#0E7AFE",
+        "Restauracao de amalgama": "#C7FC00",
+        "Restauracao de resina composta": "#00B7EB",
+    } as const;
 
-        return cores[classe] || "#757575";
+        return cores[classe as keyof typeof cores] || "#757575";
     };
 
-    const renderItemResumo = ({ item }) => (
+
+    const renderItemResumo = ({ item }: { item: [string, number] }) => (
         <View
             style={[
                 styles.resumoItem,
@@ -92,11 +99,12 @@ export default function TelaAnalises() {
                     )}
                 </View>
 
+                
                 <View style={styles.resumoContainer}>
                     <Text style={styles.titulo}>Resumo da Análise</Text>
                     {Object.keys(contagem).length > 0 ? (
                         <FlatList
-                            data={Object.entries(contagem)}
+                            data={Object.entries(contagem) as [string, number][]}
                             renderItem={renderItemResumo}
                             keyExtractor={(item) => item[0]}
                             scrollEnabled={false}

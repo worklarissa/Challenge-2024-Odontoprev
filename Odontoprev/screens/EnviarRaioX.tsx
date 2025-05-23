@@ -1,9 +1,10 @@
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { useNavigation, NavigationProp } from '@react-navigation/native';
-import { RootStackParamList } from '@react-navigation/core';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../App';
 
 export default function EnviarRaioX() {
-  const navigate = useNavigation<NavigationProp<RootStackParamList>>();
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   
   return (
     <View style={styles.container}>
@@ -11,21 +12,24 @@ export default function EnviarRaioX() {
       
       <TouchableOpacity 
         style={styles.botao} 
-        onPress={() => navigate('TelaImportar')}
+        onPress={() => navigation.navigate('ImportarRaio')}
       >
         <Text style={styles.textoBotao}>Sim, eu autorizo o envio do meu último Raio-X.</Text>
       </TouchableOpacity>
       
       <TouchableOpacity 
         style={styles.botao} 
-        onPress={() => navigate('TelaImportar')}
+        onPress={() => navigation.navigate('ImportarRaio')}
       >
         <Text style={styles.textoBotao}>Sim, gostaria de enviar a foto do meu Raio-X</Text>
       </TouchableOpacity>
       
       <TouchableOpacity 
         style={styles.botao} 
-        onPress={() => navigate('TelaImportar')}
+        onPress={() => navigation.navigate('TelaAnalises', {
+          resultadoAnalise: [],
+          imagemUri: ''     
+          })}
       >
         <Text style={styles.textoBotao}>Não. Envie meu Raio-X apenas para meu dentista.</Text>
       </TouchableOpacity>
@@ -38,8 +42,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontFamily: 'Noto Sans SC',
     alignItems: 'center',
-    justifyContent: 'center',
-    backgroundSize: 'cover'
+    justifyContent: 'center'
   },
   title: {
     fontFamily: 'Noto Sans SC',

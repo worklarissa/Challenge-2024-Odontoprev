@@ -1,9 +1,11 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import { useNavigation} from '@react-navigation/native'
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
+import { RootStackParamList } from '../App'
 
 
 export default function Home() {
-    const { navigate } = useNavigation();
+     const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
     return(
         <View style={styles.container}>
@@ -12,7 +14,7 @@ export default function Home() {
               />
               <Text style={styles.title} >Bem-vindo(a) à atualização diária sobre sua saúde bucal!</Text>
               <Text style={styles.texto} >Essas informações são muito importantes para o seu dentista e vão ajudar no seu tratamento. Além disso, ao trazer essas informações, você acumula pontos que podem ser trocados futuramente.</Text>
-              <TouchableOpacity style={styles.botao} onPress={() => navigate('EnviarRaioX')}>
+              <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('EnviarRaioX')}>
                     <Text style={styles.botao}>COMEÇAR</Text>
               </TouchableOpacity>
                    
