@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "565438085769",
+    "project_id": "odontoprev-b43fb",
+    "storage_bucket": "odontoprev-b43fb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565438085769:android:0b24a5577ef4783d2fa458",
+        "android_client_info": {
+          "package_name": "com.larissa.odontoprev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfSfX9yms3gaONonFcoU9GXo5LFduFyTo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
